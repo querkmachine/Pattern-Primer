@@ -6,19 +6,23 @@
 <link rel="stylesheet" href="global.css">
 <style>
 .pattern {
+    margin-bottom: 2em;
+    border: 1px solid #dedede;
     clear: both;
     overflow: hidden;
 }
 .pattern .display {
-    width: 65%;
-    float: left;
+    max-width: 50em;
+    padding: 1em;
 }
 .pattern .source {
-    width: 30%;
-    float: right;
+    padding: 0.5em 1em;
+    background: #dedede;
 }
 .pattern .source textarea {
-    width: 90%;
+    margin-top: 0.5em;
+    width: 100%;
+    resize: vertical;
 }
 </style>
 </head>
@@ -35,14 +39,14 @@ endwhile;
 sort($files);
 foreach ($files as $file):
     echo '<div class="pattern">';
-    echo '<div class="display">';
-    include('patterns/'.$file);
-    echo '</div>';
-    echo '<div class="source">';
+    echo '<details class="source">';
+    echo '<summary>'.$file.'</summary>';
     echo '<textarea rows="6" cols="30">';
     echo htmlspecialchars(file_get_contents('patterns/'.$file));
     echo '</textarea>';
-    echo '<p><a href="patterns/'.$file.'">'.$file.'</a></p>';
+    echo '</details>';
+    echo '<div class="display">';
+    include('patterns/'.$file);
     echo '</div>';
     echo '</div>';
 endforeach;
