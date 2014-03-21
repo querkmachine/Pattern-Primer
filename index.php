@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 <title>Pattern Primer</title>
 <link rel="stylesheet" href="global.css">
 <style>
 .pattern {
-    margin-bottom: 2em;
+    margin-bottom: 2%;
     border: 1px solid #dedede;
     clear: both;
     overflow: hidden;
 }
 .pattern .display {
-    max-width: 50em;
-    padding: 1em;
+    padding: 2%;
 }
 .pattern .source {
     padding: 0.5em 1em;
