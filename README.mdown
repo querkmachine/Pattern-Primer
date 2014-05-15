@@ -1,4 +1,4 @@
-Modified variant of adactio/Pattern-Primer that provides more default styles and uses HTML5's `details` element to expand/collapse code samples. 
+Modified variant of [adactio/Pattern-Primer](https://github.com/adactio/Pattern-Primer) that provides more default styles and uses HTML5's `details` element to expand/collapse code samples. 
 
 Create little snippets of markup and save them to the "patterns folder." The pattern primer will generate a list of all the patterns in that folder. You will see the pattern rendered as HTML. You will also get the source displayed in a textarea.
 
