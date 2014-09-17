@@ -176,8 +176,8 @@
 				sort($files);
 				foreach ($files as $file) :
 					$contents = file_get_contents($path . '/' . $file);
-					preg_match('/<!--([^\n]*\n+)+-->/s', $contents, $comments);
-					$code = preg_replace('/<!--([^\n]*\n+)+-->/s', '', $contents);
+					preg_match('/<!--(.*?)-->/sg', $contents, $comments);
+					$code = preg_replace('/<!--(.*?)-->/sg', '', $contents);
 					$comment = ''; foreach($comments as $line) { $comment .= $line; }
 			?>
 			<div class="__patterns__pattern">
